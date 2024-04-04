@@ -1,10 +1,16 @@
-"use client"
-import { useEffect } from "react"
-
-const ProductList = () => {
+export default function ProductList() {
   return (
-    <div>ProductList</div>
-  )
+    <>
+      <h1>Ecommerce</h1>
+    </>
+  );
 }
 
-export default ProductList 
+export function generateMetadata() {
+  return {
+    title: "product page",
+    description: "product description",
+  };
+}
+
+//dynamic metadata ko lagi page ma return ko bhitra title and description etc lekhane
