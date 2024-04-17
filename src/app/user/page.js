@@ -1,21 +1,12 @@
-async function userList() {
-  let data = await fetch("https://dummyjson.com/users");
-  data = await data.json();
-  return data.users;
+import { API_BASE_URL } from '@/config/constants'
+import React from 'react'
+
+
+const User = () => {
+  console.log(process.env.SERVER_PASSWORD)
+  return (
+    <div>User <br /> {API_BASE_URL} </div>
+  )
 }
 
-const User = async () => {
-  let users = await userList();
-  console.log(users);
-
-  return (
-    <div>
-      <h1>User list</h1>
-      {users.map((user, index) => {
-        return <li>{user.firstName}</li>;
-      })}
-    </div>
-  );
-};
-
-export default User;
+export default User
